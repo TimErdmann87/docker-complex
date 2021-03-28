@@ -8,7 +8,7 @@ before_install:
   - docker build -f ./client/Dockerfile.dev -t timerdmann/docker-complex-react-test ./client
 
 script:
-  - docker run -e CI=true docker-complex-react-test npm run test
+  - docker run -e CI=true timerdmann/docker-complex-react-test npm run test
 
 after_success:
   # build images for all components
